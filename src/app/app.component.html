@@ -1,0 +1,73 @@
+<div class="container" fxLayout="column"> 
+  <div *ngIf="frontCard" class = "imagehandle" fxLayout="column">
+    <div class="handledata" fxLayout="row">
+      <div class="securitytag"></div>
+      <div class="visatag"></div>
+    </div>
+    <div class="handledata2" fxLayout="row">
+      <p class="handleCardNumber">{{ cardNumbershow }}</p>
+    </div>
+    <div class="handledata3" fxLayout="row">
+      <div class="holder" fxLayout="Column">
+        <p>Card Holder</p>
+        <p class="handleCardName">{{ cardName }}</p>
+      </div>
+      <div class="expires">
+        <p>Expires</p>
+        <p class="handleCardDate">{{ monthSelected }} / {{ yearSelected }}</p>
+      </div>
+    </div>
+  </div>
+  <div *ngIf="!frontCard" class="backimagehandle" fxLayout="column">
+    <div class="backCardAbove"></div>
+    <div class="handleQR" ></div>
+    <div class="backCardCVV">
+        <div class="leftCVV"></div>
+        <div class="rightCVV">
+          <p> {{ cardCvv }}</p>
+        </div>
+    </div>
+  </div>
+  <div class="formhandle" style="padding-top: 20px;">
+  <form> 
+    <div style="padding-top: 100px;">
+      <label>Card Number</label><br>
+      <input style="height: 30px; border-radius: 5px;" [(ngModel)]="cardNumber" (ngModelChange)="getChange($event)"  name="cardnumber" type="number" pattern="/^-?\d+\.?\d*$/" onKeyPress="if(this.value.length==16) return false;">
+    </div>
+    <div style="padding-top: 15px;">
+      <label>Card Name</label><br> 
+      <input style="height: 30px; border-radius: 5px;" [(ngModel)]="cardName" (ngModelChange)="getChangeFrontCard()"  name="cardname" type="text" >
+    </div>
+    <div fxLayout="row" class="cardrow">
+      <div fxLayout="column">
+        <div>
+          <label>Expiration Date</label>
+        </div>
+        <div fxLayout="row">
+          <select style="height: 35px; border-radius: 5px;" name="month" [(ngModel)]="monthSelected" (ngModelChange)="getChangeFrontCard()">
+            <option disabled selected hidden>Month</option>
+            <option *ngFor="let month of monthsList" [value]=month.monthNumber>{{month.month}}</option>
+          </select>
+          <select style="height: 35px; border-radius: 5px; margin-left: 5px;"  name="year" [(ngModel)]="yearSelected" (ngModelChange)="getChangeFrontCard()">
+            <option disabled selected hidden>Year</option>
+            <option *ngFor="let year of yearList" [value]=year.monthNumber>{{year.month}}</option>
+          </select>
+        </div>
+      </div>
+
+      <div fxLayout="column">
+        <div>
+          <label>CVV</label>
+        </div>
+        <div>
+          <input style="height: 30px; border-radius: 5px;" [(ngModel)]="cardCvv" (ngModelChange)="getChangeCvv()"  name="cvv" type="number" pattern="/^-?\d+\.?\d*$/" onKeyPress="if(this.value.length==4) return false;">
+        </div>
+      </div>
+
+    </div>
+    <div style="padding-top: 15px;">
+      <button style="border-radius: 10px; height: 40px;">Submit</button>
+    </div>
+  </form>
+  </div>
+</div>

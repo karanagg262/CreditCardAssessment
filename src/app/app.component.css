@@ -1,0 +1,157 @@
+.container{
+    background-color:lightblue;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.formhandle{
+    border-radius: 10px;
+    background-color: white;
+    height: 75%;
+    width: 45%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 20px;
+}
+input{
+    width: 100%;
+}
+form{
+    width: 80%;
+}
+button{
+    width: 100%;
+    background-color: blue;
+    color: white;
+}
+.imagehandle{
+    border-radius: 10px;
+    background-image:url("https://i.ibb.co/m0GJbn6/7.jpg");
+    width: 35%;
+    height: 35%;
+    display: flex;
+    position:absolute;
+    top: 20px;
+}
+.backimagehandle{
+    border-radius: 10px;
+    background-image:url("https://i.ibb.co/m0GJbn6/7.jpg");
+    width: 35%;
+    height: 35%;
+    display: flex;
+    position:absolute;
+    top: 20px;
+}
+.handledata{
+    width: 100%;
+    height: 20%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.cardrow{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;  
+    padding-top: 15px; 
+}
+.securitytag{
+    background-image:url("https://i.ibb.co/7XwV8XS/chip.png");
+    border-radius: 5px;
+    width: 11%;
+    height: 100%;
+    margin-top: 25px;
+    margin-left: 25px;
+}
+.visatag{
+    background-image:url("https://i.ibb.co/j8hV0vX/troy.png");
+    width: 30%;
+    height: 100%;
+    margin-top: 25px;
+    margin-right: 25px;
+}
+.handledata2{
+    width: 100%;
+    height: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.backCardAbove{
+    height: 30%;
+    width: 100%;
+}
+.backCardCVV{
+    width: 100%;
+    height: 18%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.leftCVV{
+    border-radius: 5px;
+    width: 11%;
+    height: 100%;
+    margin-top: 25px;
+    margin-left: 25px;
+}
+.rightCVV{
+    background-image:url("https://i.ibb.co/j8hV0vX/troy.png");
+    width: 30%;
+    height: 100%;
+    margin-top: 25px;
+    margin-right: 25px;
+}
+
+.handleQR{
+    width: 100%;
+    height: 20%;
+    display: flex;
+    background-color: black;
+    justify-content: center;
+    align-items: center;
+}
+.handleCardNumber{
+    letter-spacing: 10px;
+    width: 100%;
+    height: 40%;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.handleCardName{
+    border-radius: 5px;
+    border-color: white;
+    background-color: transparent;
+    color: white;
+}
+.handleCardDate
+{
+    border-radius: 5px;
+    border-color: white;
+    background-color: transparent;
+    color: white; 
+}
+.handledata3{
+    width: 100%;
+    height: 30%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;   
+}
+.holder{
+    width: 30%;
+    height: 100%;
+    color: white;
+    margin-left: 25px;
+}
+.expires{
+    width: 20%;
+    height: 100%;
+    color: white;
+    margin-right: 25px;
+}
