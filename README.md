@@ -1,5 +1,11 @@
 # CreditCardForm
 
+A credit card form. A fantastic credit card form with smooth and sweet micro interactions having number formatting, validation,
+
+Whenever user inputs details in form, automatically changes will be reflected on Credit Card.
+Incase of Card Number, Name, and CVV front card will be displayed to user with details.
+Incase of Card CVV, credit card will be flipped to display CVV to user
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 12.2.3.
 
 ## Development server
